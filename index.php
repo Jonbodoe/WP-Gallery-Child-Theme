@@ -17,7 +17,6 @@ get_header();
 
 	<main id="primary" class="site-main container-fluid">
 
-
 		<?php
 		if ( have_posts() ) :
 
