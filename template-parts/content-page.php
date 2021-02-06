@@ -15,8 +15,6 @@
 
 	</header><!-- .entry-header -->
 
-	<?php wp_gallery_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<h3></h3>
 		<?php

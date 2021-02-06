@@ -38,7 +38,7 @@ if (!empty($gallerySection)) :
 endif;
 
 $marketSection = get_field('secondary_market');
-if (!empty($marketSection)) {
+if (!empty($marketSection)) :
     $marketImage = $marketSection['image'];
     $marketExcerpt = $marketSection['content']['excerpt'];
     $marketTitle = $marketSection['content']['title'];
@@ -47,10 +47,10 @@ if (!empty($marketSection)) {
     $marketFirstImage = $marketSection['carousel_images']['first_image'];
     $marketSecondImage = $marketSection['carousel_images']['second_image'];
     $marketThirdImage = $marketSection['carousel_images']['third_image'];
-}
+endif;
 
 $projectSection = get_field('projects');
-if (!empty($projectSection)) {
+if (!empty($projectSection)) :
     $projectImage = $projectSection['project_image'];
     $projectFirstImage = $projectSection['project_carousel']['first_image'];
     $projectSecondImage = $projectSection['project_carousel']['second_image'];
@@ -59,7 +59,7 @@ if (!empty($projectSection)) {
     $projectTitle = $projectSection['project_content']['project_title'];
     $projectButtonLabel = $projectSection['project_content']['button_label'];
     $projectButtonURL = $projectSection['project_content']['button_url'];
-}
+endif;
 
 
 function getFeaturedExhibitionPosts()

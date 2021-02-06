@@ -29,7 +29,7 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php wp_gallery_post_thumbnail(); ?>
+	<!-- <?php wp_gallery_post_thumbnail(); ?> -->
 
 	<div class="entry-content">
 		<?php

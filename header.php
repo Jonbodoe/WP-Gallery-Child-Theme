@@ -18,8 +18,6 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;800&display=swap" rel="stylesheet"> -->
 
 	<?php wp_head(); ?>
 </head>
@@ -41,46 +39,22 @@
 					?>
 						<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 					<?php
-					else :
-					?>
-						<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-					<?php
 					endif;
 					$wp_gallery_description = get_bloginfo('description', 'display');
 					if ($wp_gallery_description || is_customize_preview()) :
 					?>
-						<p class="site-description"><?php echo $wp_gallery_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-													?></p>
 					<?php endif; ?>
 				</div><!-- .site-branding -->
-
-				<!-- <nav id="site-navigation" class="main-navigation"> -->
-				<!-- <button class="hamburger hamburger--collapse-r" type="button">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
-					</span>
-				</button> -->
-				<!-- <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false">
-					<?php
-					// esc_html_e('Primary Menu', 'wp-gallery');
-					?>
-				</button> -->
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
-				</button>
-
-
-
-				<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php
-																									// esc_html_e('Primary Menu', 'wp-gallery'); 
-																									?></button> -->
+				</button>															?></button> -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<div class="navbar-nav ml-auto">
 						<?php
-
 						wp_nav_menu(
 							array(
-								'theme_location' => 'menu-1',
+								'theme_location' => 'primary',
+								'menu' => 'Primary Menu',
 								'menu_id'        => 'primary-menu navigation',
 								'menu_class' => 'text-center',
 							)

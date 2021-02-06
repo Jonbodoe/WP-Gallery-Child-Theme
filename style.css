@@ -1,3 +1,28 @@
+/*!
+Theme Name: wp gallery child
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Template: wp-gallery
+Description: Child Theme
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp-gallery-child
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+WP Gallery is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
 :root {
     --primary: #184C77;
     --dark: #1d1f21;
@@ -8,6 +33,9 @@
     --secondary: #7e8287;
     --accent: #1e74bd;
     --padding-sml: 10px;
+}
+html, body{
+    font-family: 'Raleway', sans-serif;
 }
 
 .post, .page {
@@ -82,9 +110,6 @@ a:hover {
 html {
     background-color: var(--dark)
 }
-html, body{
-    font-family: 'Raleway', sans-serif;
-}
 nav a:visited, a:visited, footer a {
     color: var(--gray);
 }
@@ -129,8 +154,8 @@ nav li.current-menu-item.current_page_item a{
 }
 
 .navbar-brand, .custom-logo {
-    min-width: 13.5rem;
-    max-width: 16rem;
+    min-width: 7rem;
+    max-width: 12rem;
 }
 
 .jumbotron-image {
@@ -153,12 +178,6 @@ nav li.current-menu-item.current_page_item a{
     background-size: cover;
     position: relative;
     /* overflow: hidden; */
-}
-.overlay:before {
-    /* content: "";
-    position: absolute;
-    left: 0; right: 0;
-    top: 0; bottom: 0; */
 }
 .dark-overlay:before{
     content: "";
@@ -194,8 +213,8 @@ nav li.current-menu-item.current_page_item a{
 }
 
 .img-logo {
-    min-width: 12rem;
-    max-width: 15rem;
+    min-width: 8rem;
+    max-width: 13rem;
 }
 .btn {
     border-radius: 0px;
@@ -239,6 +258,12 @@ nav li.current-menu-item.current_page_item a{
 
 .wp-nav-margin {
     margin-top: 30px;
+}
+
+.header-img-block {
+    height: 14rem;
+    width: 100%;
+    overflow: hidden;
 }
 @media only screen and (max-width: 950px) { 
     .img-fill{

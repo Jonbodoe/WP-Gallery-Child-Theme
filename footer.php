@@ -12,31 +12,40 @@
 
 ?>
 
+<?php 
+	$footer_settings = get_field('footer_settings', 'option'); 
+	// print_r($footer_settings);
+	if (!empty($footer_settings)) :
+		$footer_logo = $footer_settings['logo'];
+		$footer_address = $footer_settings['location'];
+		$footer_hours = $footer_settings['hours'];
+	endif;
+?>
+
 <footer id="colophon" class="">
 	<div class="container-fluid bg-dark pt-3">
 		<div class="row site-info px-3 py-5 flex-wrap-reverse">
 			<div class="col-md-3 d-flex align-items-center">
 				<div class="py-4 hide-mobile">
-					<?php
-					print_r(get_custom_logo(['class' => 'img-fluid']));
-					?>
+					<img class="img-fluid img-logo" src=" <?php echo !empty($footer_logo) ? $footer_logo: ''; ?>">
 				</div>
 			</div>
 			<div class="col-md-3"></div>
 			<div class="col-md-2">
 				<p class="font-bold-600 text-light">Location</p>
-				<p class="text-gray">
-					Works On Paper<br />
-					1611 Walnut St # B<br />
-					Philadelphia, PA 19103<br />
-				</p>
+				<div class="text-gray">
+					<?php 
+						echo !empty($footer_address) ? $footer_address : '';
+					?>
+				</div>
 			</div>
 			<div class="col-md-2">
 				<p class="font-bold-600 text-light">Gallery Hours</p>
-				<p class="text-gray">
-					Tuesday - Friday : 11am -5pm<br />
-					Sunday - Monday : Closed<br />
-				</p>
+				<div class="text-gray">
+					<?php 
+						echo !empty($footer_hours) ? $footer_hours: '';
+					?>
+				</div>
 			</div>
 			<div class="col-md-2">
 				<p class="font-bold-600 text-light">More Information</p>
